@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparkle &amp; Shine Home Cleaning</title>
+<meta name="description" content="Reliable, affordable home cleaning. Get a free quote in minutes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10284a; --blue:#1769e0; --sky:#e8f2ff; --foam:#f7fbff;
+  --sun:#ffd23f; --line:#cfe0f7; --muted:#4d6382;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--foam);line-height:1.6;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h1,h2,h3{line-height:1.15;font-weight:800}
+h1{font-size:clamp(2.3rem,7vw,4rem);max-width:14ch}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:12px}
+p.lead{color:var(--muted);max-width:52ch}
+.btn{display:inline-block;background:var(--sun);color:var(--ink);font-weight:800;text-decoration:none;padding:14px 26px;border-radius:999px;border:0;font:inherit;font-weight:800;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:transparent;border:2px solid #fff;color:#fff}
+
+/* header */
+header{background:var(--blue);color:#fff}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;max-width:1040px;margin:0 auto}
+.logo{font-weight:800;font-size:1.2rem;text-decoration:none}
+nav a.tel{text-decoration:none;font-weight:600}
+.hero{padding:48px 0 0;position:relative;overflow:hidden}
+.hero .wrap{display:grid;gap:28px}
+.hero p{max-width:40ch;font-size:1.15rem;color:#dbeaff}
+.hero .row{display:flex;gap:12px;flex-wrap:wrap}
+.suds{display:flex;gap:0;margin-top:8px;height:90px;align-items:flex-end}
+.suds i{display:block;border-radius:50%;background:rgba(255,255,255,.18);flex:1;aspect-ratio:1}
+.suds i:nth-child(odd){transform:translateY(30%)}
+.suds i:nth-child(3n){background:rgba(255,210,63,.35)}
+.suds i:nth-child(4n){transform:translateY(50%) scale(1.4)}
+@media(min-width:760px){.hero .wrap{grid-template-columns:1.3fr 1fr;align-items:end}}
+
+/* services */
+.cards{display:grid;gap:18px;margin-top:28px}
+@media(min-width:760px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:2px solid var(--line);border-radius:22px;padding:26px}
+.card.feat{background:var(--ink);color:#fff;border-color:var(--ink)}
+.card .ico{font-size:2rem}
+.card h3{margin:8px 0 6px}
+.card p{color:var(--muted);font-size:.98rem}
+.card.feat p{color:#bcd2f2}
+.price{margin-top:14px;font-weight:800;font-size:1.3rem}
+.price small{font-weight:400;font-size:.85rem;opacity:.75}
+
+/* steps */
+.steps{background:var(--sky)}
+.steps ol{list-style:none;padding:0;display:grid;gap:16px;margin-top:24px;counter-reset:s}
+@media(min-width:760px){.steps ol{grid-template-columns:repeat(3,1fr)}}
+.steps li{counter-increment:s;padding-left:58px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:42px;height:42px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800}
+.steps strong{display:block;font-size:1.1rem}
+.steps span{color:var(--muted)}
+
+/* why */
+.why ul{list-style:none;padding:0;display:grid;gap:12px;margin-top:20px}
+@media(min-width:760px){.why ul{grid-template-columns:1fr 1fr}}
+.why li{padding-left:34px;position:relative}
+.why li::before{content:"✓";position:absolute;left:0;top:1px;width:24px;height:24px;border-radius:50%;background:var(--sun);display:grid;place-items:center;font-weight:800;font-size:.85rem}
+
+/* reviews */
+.reviews{background:#fff}
+.quotes{display:grid;gap:18px;margin-top:24px}
+@media(min-width:760px){.quotes{grid-template-columns:repeat(3,1fr)}}
+blockquote{border-left:5px solid var(--blue);padding:4px 0 4px 16px}
+blockquote footer{background:none;color:var(--muted);font-size:.9rem;margin-top:6px}
+.sample{font-size:.85rem;color:var(--muted);margin-top:18px}
+
+/* quote */
+.quote{background:var(--blue);color:#fff}
+.quote .wrap{display:grid;gap:28px}
+@media(min-width:760px){.quote .wrap{grid-template-columns:1fr 1fr;align-items:start}}
+.quote p.lead{color:#dbeaff}
+form{background:#fff;color:var(--ink);padding:26px;border-radius:22px;display:grid;gap:14px}
+label{font-weight:600;font-size:.95rem;display:grid;gap:5px}
+input,select{font:inherit;padding:12px;border:2px solid var(--line);border-radius:12px;background:var(--foam);color:var(--ink);width:100%}
+.est{background:var(--sky);border-radius:12px;padding:12px 14px;font-weight:600}
+.est b{font-size:1.2rem}
+#ok{display:none;background:#e3f8e8;border-radius:12px;padding:12px 14px;font-weight:600}
+
+footer.site{background:var(--ink);color:#bcd2f2;padding:36px 0 96px;font-size:.95rem}
+footer.site .wrap{display:grid;gap:6px}
+footer.site strong{color:#fff}
+
+/* sticky call button, phones only */
+.call{position:fixed;left:16px;right:16px;bottom:max(16px,env(safe-area-inset-bottom));text-align:center;z-index:9;box-shadow:0 6px 18px rgba(16,40,74,.35)}
+@media(min-width:760px){.call{display:none}footer.site{padding-bottom:36px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="#top">Sparkle &amp; Shine</a>
+    <a class="tel" href="tel:+15550100123">(555) 010-0123</a>
+  </nav>
+  <div class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <h1>A cleaner home, without the stress.</h1>
+      </div>
+      <div>
+        <p>Reliable, affordable home cleaning in Springfield and nearby towns. Tell us about your home and get a quote today.</p>
+        <div class="row" style="margin-top:20px">
+          <a class="btn" href="#quote">Get a free quote</a>
+          <a class="btn alt" href="#services">See services</a>
+        </div>
+      </div>
+    </div>
+    <div class="suds" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+</header>
+
+<main>
+<section id="services">
+  <div class="wrap">
+    <h2>Pick the clean that fits your week</h2>
+    <p class="lead">Every visit comes with our own supplies and a checklist you can read before we arrive.</p>
+    <div class="cards">
+      <article class="card">
+        <div class="ico" aria-hidden="true">🧽</div>
+        <h3>Standard clean</h3>
+        <p>Dusting, vacuuming, mopping, kitchen and bathroom wipe-down. Good for weekly or biweekly upkeep.</p>
+        <div class="price">$120 <small>starting at</small></div>
+      </article>
+      <article class="card feat">
+        <div class="ico" aria-hidden="true">✨</div>
+        <h3>Deep clean</h3>
+        <p>Everything in a standard clean, plus baseboards, inside the oven and fridge, and the grime behind the appliances.</p>
+        <div class="price">$220 <small>starting at</small></div>
+      </article>
+      <article class="card">
+        <div class="ico" aria-hidden="true">📦</div>
+        <h3>Move-in / move-out clean</h3>
+        <p>Empty-home reset so you get your deposit back or start fresh in your new place.</p>
+        <div class="price">$280 <small>starting at</small></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <h2>Booking takes about two minutes</h2>
+    <ol>
+      <li><strong>Request a quote</strong><span>Tell us your home size and the clean you want.</span></li>
+      <li><strong>Pick a time</strong><span>We confirm a slot that works for you, usually within a few hours.</span></li>
+      <li><strong>Come home to clean</strong><span>We do the work. You check the list and pay when you're happy.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <h2>Why people stay with us</h2>
+    <ul>
+      <li>Insured and background-checked cleaners</li>
+      <li>Eco-friendly products, safe for kids and pets</li>
+      <li>Same cleaner each visit whenever possible</li>
+      <li>Not happy? We re-clean it free within 24 hours</li>
+    </ul>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <h2>What customers say</h2>
+    <div class="quotes">
+      <blockquote><p>They left the kitchen cleaner than when we moved in. Booking was easy.</p><footer>Maria T.</footer></blockquote>
+      <blockquote><p>On time every Thursday. I stopped dreading weekends.</p><footer>Daniel R.</footer></blockquote>
+      <blockquote><p>The move-out clean got our full deposit back.</p><footer>Priya S.</footer></blockquote>
+    </div>
+    <p class="sample">Sample reviews for a concept project.</p>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div>
+      <h2>Get your free quote</h2>
+      <p class="lead">Fill this in and we'll text you a price and open times. The estimate updates as you choose.</p>
+    </div>
+    <form name="quote" method="POST" data-netlify="true" id="qf">
+      <input type="hidden" name="form-name" value="quote">
+      <label>Name<input name="name" required autocomplete="name"></label>
+      <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+      <label>Type of clean
+        <select name="service" id="svc">
+          <option value="120">Standard clean</option>
+          <option value="220">Deep clean</option>
+          <option value="280">Move-in / move-out clean</option>
+        </select>
+      </label>
+      <label>Bedrooms
+        <select name="bedrooms" id="bed">
+          <option value="0">1 to 2</option>
+          <option value="40">3</option>
+          <option value="80">4 or more</option>
+        </select>
+      </label>
+      <label>Preferred date<input name="date" type="date" required></label>
+      <div class="est">Estimated price: <b id="est">$120</b></div>
+      <button class="btn" type="submit">Request my quote</button>
+      <div id="ok" role="status">Thanks! We'll text you shortly.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <strong>Sparkle &amp; Shine Home Cleaning</strong>
+    <span>(555) 010-0123 · hello@sparkleshine.example</span>
+    <span>Serving Springfield and nearby towns</span>
+    <span>Mon to Sat, 8am to 6pm</span>
+    <span>Concept project. Not a real business.</span>
+  </div>
+</footer>
+
+<a class="btn call" href="tel:+15550100123">Call now</a>
+
+<script>
+const svc=document.getElementById('svc'),bed=document.getElementById('bed'),est=document.getElementById('est');
+function upd(){est.textContent='$'+(+svc.value + +bed.value)}
+svc.addEventListener('change',upd);bed.addEventListener('change',upd);
+</script>
+</body>
+</html>
